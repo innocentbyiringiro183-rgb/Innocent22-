@@ -1,0 +1,1676 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style_promax.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>SafeSpace Youth 🌍 - Your Safe Space to Learn, Share, and Grow</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes bounce-in {
+            0% {
+                opacity: 0;
+                transform: scale(0.3);
+            }
+            50% {
+                opacity: 1;
+                transform: scale(1.05);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        @keyframes pulse-icon {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+        }
+
+        @keyframes float-icon {
+            0%, 100% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        @keyframes rotate-icon {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes blink-alert {
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.6;
+            }
+        }
+
+        /* ANIMATED SAFESPACE YOUTH TITLE */
+        @keyframes rainbow-wave {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        @keyframes float-up-down {
+            0%, 100% {
+                transform: translateY(0px) rotateZ(0deg);
+            }
+            25% {
+                transform: translateY(-8px) rotateZ(1deg);
+            }
+            50% {
+                transform: translateY(-15px) rotateZ(-1deg);
+            }
+            75% {
+                transform: translateY(-8px) rotateZ(1deg);
+            }
+        }
+
+        @keyframes glow-pulse {
+            0%, 100% {
+                text-shadow: 0 0 10px rgba(236, 72, 153, 0.5), 0 0 20px rgba(239, 68, 68, 0.3);
+                filter: brightness(1);
+            }
+            50% {
+                text-shadow: 0 0 20px rgba(236, 72, 153, 0.8), 0 0 40px rgba(239, 68, 68, 0.6), 0 0 60px rgba(236, 72, 153, 0.4);
+                filter: brightness(1.2);
+            }
+        }
+
+        @keyframes sway {
+            0%, 100% {
+                transform: skewX(0deg);
+            }
+            25% {
+                transform: skewX(2deg);
+            }
+            75% {
+                transform: skewX(-2deg);
+            }
+        }
+
+        @keyframes bounce-scale {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+        }
+
+        @keyframes spin-text {
+            0% {
+                transform: rotateY(0deg);
+            }
+            50% {
+                transform: rotateY(180deg);
+            }
+            100% {
+                transform: rotateY(360deg);
+            }
+        }
+
+        @keyframes slide-horizontal {
+            0%, 100% {
+                transform: translateX(0px);
+            }
+            50% {
+                transform: translateX(10px);
+            }
+        }
+
+        .animated-title {
+            background: linear-gradient(45deg, #ec4899, #ef4444, #f43f5e, #ec4899, #ef4444);
+            background-size: 300% 300%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-size: 2.25rem;
+            font-weight: 900;
+            letter-spacing: -0.05em;
+            animation: rainbow-wave 4s ease infinite, glow-pulse 2s ease-in-out infinite, float-up-down 3s ease-in-out infinite;
+            filter: drop-shadow(0 0 15px rgba(236, 72, 153, 0.3));
+            display: inline-block;
+            position: relative;
+        }
+
+        .animated-title span {
+            display: inline-block;
+            animation: bounce-scale 1.5s ease-in-out infinite;
+        }
+
+        .animated-title span:nth-child(1) {
+            animation-delay: 0s;
+        }
+
+        .animated-title span:nth-child(2) {
+            animation-delay: 0.1s;
+        }
+
+        .animated-title span:nth-child(3) {
+            animation-delay: 0.2s;
+        }
+
+        .animated-title span:nth-child(4) {
+            animation-delay: 0.3s;
+        }
+
+        .animated-title span:nth-child(5) {
+            animation-delay: 0.4s;
+        }
+
+        .animated-title span:nth-child(6) {
+            animation-delay: 0.5s;
+        }
+
+        .animated-title span:nth-child(7) {
+            animation-delay: 0.6s;
+        }
+
+        .animated-title span:nth-child(8) {
+            animation-delay: 0.7s;
+        }
+
+        .animated-title span:nth-child(9) {
+            animation-delay: 0.8s;
+        }
+
+        .animated-title span:nth-child(10) {
+            animation-delay: 0.9s;
+        }
+
+        .animated-title span:nth-child(11) {
+            animation-delay: 1s;
+        }
+
+        .animated-title span:nth-child(12) {
+            animation-delay: 1.1s;
+        }
+
+        .animated-title span:nth-child(13) {
+            animation-delay: 1.2s;
+        }
+
+        .glow-effect {
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 300px;
+            height: 100px;
+            background: radial-gradient(ellipse at center, rgba(236, 72, 153, 0.3) 0%, rgba(239, 68, 68, 0.2) 50%, transparent 70%);
+            filter: blur(30px);
+            animation: glow-pulse 2s ease-in-out infinite;
+            pointer-events: none;
+        }
+
+        .modal {
+            transition: all 0.3s ease;
+        }
+
+        .modal.hidden {
+            display: none;
+        }
+
+        .modal-animation {
+            animation: slideUp 0.4s ease;
+        }
+
+        .form-label {
+            display: block;
+            font-weight: 700;
+            color: #1e293b;
+            margin-bottom: 0.5rem;
+            font-size: 1.05rem;
+        }
+
+        .form-hint {
+            font-size: 0.9rem;
+            color: #64748b;
+            margin-bottom: 1rem;
+            font-style: italic;
+        }
+
+        .age-options {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+            gap: 0.75rem;
+        }
+
+        .age-btn {
+            border: 2px solid #e2e8f0;
+            border-radius: 1rem;
+            background: white;
+            color: #1e293b;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            padding: 1.25rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+
+        .age-btn:hover {
+            border-color: #ec4899;
+            transform: translateY(-5px);
+            box-shadow: 0 4px 12px rgba(236, 72, 153, 0.3);
+        }
+
+        .age-btn.selected {
+            background: linear-gradient(135deg, #ec4899, #ef4444);
+            color: white;
+            border-color: #ec4899;
+            box-shadow: 0 8px 20px rgba(236, 72, 153, 0.4);
+        }
+
+        .age-icon {
+            font-size: 2rem;
+            animation: float-icon 2s ease-in-out infinite;
+        }
+
+        .age-btn.selected .age-icon {
+            animation: pulse-icon 0.6s ease-in-out infinite;
+        }
+
+        .service-category {
+            background: linear-gradient(135deg, rgba(236, 72, 153, 0.08), rgba(239, 68, 68, 0.08));
+            border-radius: 1rem;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-left: 4px solid #ec4899;
+        }
+
+        .service-category:nth-child(even) {
+            border-left-color: #ef4444;
+        }
+
+        .service-category-title {
+            font-weight: 700;
+            color: #ec4899;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-size: 1.1rem;
+        }
+
+        .service-category:nth-child(even) .service-category-title {
+            color: #ef4444;
+        }
+
+        .category-icon {
+            font-size: 1.5rem;
+            animation: rotate-icon 8s linear infinite;
+        }
+
+        .service-options {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 0.75rem;
+        }
+
+        .service-checkbox {
+            display: flex;
+            flex-direction: column;
+            padding: 1rem;
+            border: 2px solid #e2e8f0;
+            border-radius: 0.75rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            background: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-checkbox::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(236, 72, 153, 0.1), rgba(239, 68, 68, 0.1));
+            transition: left 0.3s ease;
+            z-index: 0;
+        }
+
+        .service-checkbox:hover {
+            border-color: #ec4899;
+            background-color: #fdf2f8;
+            transform: translateX(3px);
+        }
+
+        .service-checkbox:hover::before {
+            left: 0;
+        }
+
+        .service-checkbox-content {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .service-checkbox input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+            accent-color: #ec4899;
+            margin-bottom: 0.25rem;
+        }
+
+        .service-label {
+            font-weight: 600;
+            color: #1e293b;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .service-icon {
+            font-size: 1.3rem;
+            animation: float-icon 2s ease-in-out infinite;
+        }
+
+        .service-checkbox input[type="checkbox"]:checked + .service-label .service-icon {
+            animation: pulse-icon 0.6s ease-in-out infinite;
+        }
+
+        .service-description {
+            font-size: 0.85rem;
+            color: #64748b;
+            cursor: pointer;
+            margin-left: 1.75rem;
+            padding: 0.25rem 0.5rem;
+            border-left: 2px solid #e2e8f0;
+            padding-left: 0.75rem;
+        }
+
+        .service-checkbox input[type="checkbox"]:checked + .service-label {
+            color: #ec4899;
+        }
+
+        .service-checkbox:has(input:checked) {
+            background: linear-gradient(135deg, rgba(236, 72, 153, 0.12), rgba(239, 68, 68, 0.08));
+            border-color: #ec4899;
+            box-shadow: 0 4px 12px rgba(236, 72, 153, 0.2);
+        }
+
+        .btn-secondary {
+            background-color: #e2e8f0;
+            color: #1e293b;
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 0.75rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .btn-secondary:hover {
+            background-color: #cbd5e1;
+            transform: translateY(-2px);
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #ec4899, #ef4444);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 0.75rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .btn-primary:hover {
+            box-shadow: 0 8px 16px rgba(236, 72, 153, 0.3);
+            transform: translateY(-2px);
+        }
+
+        .modal-actions {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .service-count {
+            background: linear-gradient(135deg, #ec4899, #ef4444);
+            color: white;
+            border-radius: 50%;
+            width: 28px;
+            height: 28px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.75rem;
+            font-weight: 700;
+            margin-left: auto;
+        }
+
+        .government-support-card {
+            background: linear-gradient(135deg, #fef2f2, #ffe4e6);
+            border: 2px solid #fca5a5;
+            border-radius: 1.25rem;
+            padding: 2rem;
+            margin: 2rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .government-support-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 300px;
+            height: 300px;
+            background: linear-gradient(135deg, rgba(239, 68, 68, 0.1), rgba(239, 68, 68, 0.05));
+            border-radius: 50%;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .government-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .government-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .government-icon {
+            font-size: 2.5rem;
+            animation: blink-alert 1.5s ease-in-out infinite;
+        }
+
+        .government-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #dc2626;
+        }
+
+        .government-subtitle {
+            font-size: 0.95rem;
+            color: #7f1d1d;
+            margin-bottom: 1rem;
+        }
+
+        .government-description {
+            color: #991b1b;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+            font-size: 0.95rem;
+        }
+
+        .government-contact {
+            background: white;
+            border-left: 4px solid #dc2626;
+            padding: 1.25rem;
+            border-radius: 0.5rem;
+            margin: 1rem 0;
+        }
+
+        .contact-label {
+            font-size: 0.85rem;
+            color: #7f1d1d;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-number {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #dc2626;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .contact-instruction {
+            background: linear-gradient(135deg, #fee2e2, #fecaca);
+            border-radius: 0.5rem;
+            padding: 1rem;
+            margin-top: 1rem;
+            color: #7f1d1d;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .call-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: linear-gradient(135deg, #dc2626, #991b1b);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            margin-top: 0.75rem;
+        }
+
+        .call-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 12px rgba(220, 38, 38, 0.4);
+        }
+
+        .government-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .feature-item {
+            background: white;
+            padding: 1rem;
+            border-radius: 0.75rem;
+            text-align: center;
+            border: 1px solid #fca5a5;
+        }
+
+        .feature-icon {
+            font-size: 1.75rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .feature-text {
+            font-size: 0.85rem;
+            color: #7f1d1d;
+            font-weight: 500;
+        }
+
+        /* Navigation Animated Title */
+        .nav-animated-title {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        /* FLOATING BUTTONS CONTAINER */
+        .floating-buttons-container {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            z-index: 40;
+        }
+
+        .floating-btn-wrapper {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+        }
+
+        /* WhatsApp Button */
+        .whatsapp-container {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 40;
+        }
+
+        .whatsapp-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #25d366, #20ba58);
+            color: white;
+            border-radius: 50%;
+            font-size: 28px;
+            text-decoration: none;
+            box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+            transition: all 0.3s ease;
+            animation: float-icon 3s ease-in-out infinite;
+        }
+
+        .whatsapp-btn:hover {
+            transform: scale(1.15);
+            box-shadow: 0 8px 24px rgba(37, 211, 102, 0.6);
+        }
+
+        .whatsapp-tooltip,
+        .emergency-tooltip,
+        .feedback-tooltip {
+            position: absolute;
+            bottom: 75px;
+            right: 0;
+            background: white;
+            border-radius: 12px;
+            padding: 12px 16px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            white-space: nowrap;
+            z-index: 50;
+            min-width: 200px;
+        }
+
+        .whatsapp-container:hover .whatsapp-tooltip,
+        .emergency-container:hover .emergency-tooltip,
+        .feedback-container:hover .feedback-tooltip {
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(-10px);
+        }
+
+        .tooltip-title {
+            font-weight: 700;
+            color: #1e293b;
+            margin-bottom: 4px;
+            font-size: 0.9rem;
+        }
+
+        .tooltip-message {
+            color: #64748b;
+            font-size: 0.8rem;
+            margin: 0;
+        }
+
+        /* Emergency Button */
+        .emergency-container {
+            position: fixed;
+            bottom: 90px;
+            right: 20px;
+            z-index: 40;
+        }
+
+        .emergency-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #dc2626, #991b1b);
+            color: white;
+            border-radius: 50%;
+            font-size: 24px;
+            text-decoration: none;
+            box-shadow: 0 4px 12px rgba(220, 38, 38, 0.4);
+            transition: all 0.3s ease;
+            animation: blink-alert 2s ease-in-out infinite;
+        }
+
+        .emergency-btn:hover {
+            transform: scale(1.15);
+            box-shadow: 0 8px 24px rgba(220, 38, 38, 0.6);
+            animation: pulse-icon 0.6s ease-in-out infinite;
+        }
+
+        /* Feedback Button */
+        .feedback-container {
+            position: fixed;
+            bottom: 160px;
+            right: 20px;
+            z-index: 40;
+        }
+
+        .feedback-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #3b82f6, #2563eb);
+            color: white;
+            border-radius: 50%;
+            font-size: 24px;
+            text-decoration: none;
+            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
+            transition: all 0.3s ease;
+            animation: float-icon 3s ease-in-out infinite;
+            animation-delay: 0.5s;
+        }
+
+        .feedback-btn:hover {
+            transform: scale(1.15);
+            box-shadow: 0 8px 24px rgba(59, 130, 246, 0.6);
+        }
+
+        @media (max-width: 768px) {
+            .age-options {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .service-category {
+                padding: 1rem;
+            }
+
+            .government-support-card {
+                padding: 1.5rem;
+            }
+
+            .government-features {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .animated-title {
+                font-size: 1.5rem;
+            }
+
+            .floating-buttons-container,
+            .whatsapp-container,
+            .emergency-container,
+            .feedback-container {
+                bottom: 15px;
+                right: 15px;
+            }
+
+            .whatsapp-btn,
+            .emergency-btn,
+            .feedback-btn {
+                width: 50px;
+                height: 50px;
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 font-sans text-gray-900 scroll-smooth">
+
+    <!-- Feedback Floating Button -->
+    <div class="feedback-container">
+        <a href="mailto:feedback@safespaceyouth.com?subject=SafeSpace%20Youth%20Feedback&body=Hello%20SafeSpace%20Youth%20Team,%0A%0AI%20would%20like%20to%20share%20my%20feedback%20about%20your%20platform.%0A%0A[Please%20share%20your%20feedback%20here]%0A%0AThank%20you!" 
+           class="feedback-btn" 
+           title="Send us your feedback">
+            <i class="fas fa-comment-dots"></i>
+        </a>
+        <div class="feedback-tooltip">
+            <p class="tooltip-title">💬 Share Your Feedback</p>
+            <p class="tooltip-message">Help us improve SafeSpace</p>
+        </div>
+    </div>
+
+    <!-- WhatsApp Floating Button -->
+    <div class="whatsapp-container">
+        <a href="https://wa.me/250792369921?text=Hello%20SafeSpace%20Youth!%20I%20need%20support%20and%20guidance.%20Please%20help%20me." 
+           target="_blank" 
+           class="whatsapp-btn" 
+           title="Chat with us on WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+        <div class="whatsapp-tooltip">
+            <p class="tooltip-title">Welcome to SafeSpace Youth! 👋</p>
+            <p class="tooltip-message">We're here to listen and support you</p>
+        </div>
+    </div>
+
+    <!-- Emergency Support Floating Button -->
+    <div class="emergency-container">
+        <a href="mailto:innocentbyiringiro183@gmail.com?subject=URGENT:%20SafeSpace%20Youth%20Emergency%20Support%20Needed&body=I%20need%20immediate%20support%20and%20assistance.%20Please%20reach%20out%20to%20me%20as%20soon%20as%20possible.%20This%20is%20urgent." 
+           class="emergency-btn" 
+           title="Emergency Support - Email Us">
+            <i class="fas fa-exclamation-circle"></i>
+        </a>
+        <div class="emergency-tooltip">
+            <p class="tooltip-title">🆘 Need Help Now?</p>
+            <p class="tooltip-message">Email us for urgent support</p>
+        </div>
+    </div>
+
+    <!-- User Profile Modal -->
+    <div id="userProfileModal" class="modal hidden fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4">
+        <div class="bg-white rounded-3xl max-w-3xl w-full max-h-[90vh] overflow-y-auto modal-animation">
+            <div class="sticky top-0 bg-gradient-to-r from-pink-600 to-red-600 text-white p-6 flex justify-between items-center z-10">
+                <div>
+                    <h2 class="text-3xl font-bold">Let's Get to Know You 👋</h2>
+                    <p class="text-pink-100">Share what's comfortable for you. This helps us support you better.</p>
+                </div>
+                <button onclick="closeUserProfileModal()" class="text-2xl hover:scale-125 transition">✕</button>
+            </div>
+
+            <div class="p-8 space-y-8">
+                
+                <!-- Age Group Selection -->
+                <div class="form-group">
+                    <label class="form-label">🎂 What's your age range?</label>
+                    <p class="form-hint">Helps us provide age-appropriate information tailored just for you</p>
+                    <div class="age-options">
+                        <button class="age-btn" onclick="selectAgeGroup('10-13')">
+                            <i class="fas fa-child age-icon"></i>
+                            <p>10-13</p>
+                            <small style="font-size: 0.7rem; opacity: 0.7;">Pre-Teen</small>
+                        </button>
+                        <button class="age-btn" onclick="selectAgeGroup('14-17')">
+                            <i class="fas fa-user age-icon"></i>
+                            <p>14-17</p>
+                            <small style="font-size: 0.7rem; opacity: 0.7;">Teen</small>
+                        </button>
+                        <button class="age-btn" onclick="selectAgeGroup('18-24')">
+                            <i class="fas fa-user-graduate age-icon"></i>
+                            <p>18-24</p>
+                            <small style="font-size: 0.7rem; opacity: 0.7;">Young Adult</small>
+                        </button>
+                        <button class="age-btn" onclick="selectAgeGroup('25+')">
+                            <i class="fas fa-person age-icon"></i>
+                            <p>25+</p>
+                            <small style="font-size: 0.7rem; opacity: 0.7;">Adult</small>
+                        </button>
+                    </div>
+                    <input type="hidden" id="selectedAgeGroup" value="">
+                </div>
+
+                <!-- Service Needs Selection -->
+                <div class="form-group">
+                    <label class="form-label">💭 What services are you interested in? <span class="text-red-600">(Select multiple)</span></label>
+                    <p class="form-hint">You can pick as many as you'd like to get personalized support</p>
+                    
+                    <!-- Mental Health Services -->
+                    <div class="service-category">
+                        <div class="service-category-title">
+                            <i class="fas fa-brain category-icon"></i>
+                            Mental Health & Wellness
+                            <span class="service-count">5</span>
+                        </div>
+                        <div class="service-options">
+                            <label class="service-checkbox">
+                                <input type="checkbox" name="service" value="mental-health-general" onchange="updateServices()">
+                                <span class="service-label">
+                                    <i class="fas fa-spa service-icon"></i>
+                                    General Mental Health Support
+                                </span>
+                                <span class="service-description">Stress, anxiety, depression management & coping strategies</span>
+                            </label>
+                            <label class="service-checkbox">
+                                <input type="checkbox" name="service" value="emotional-wellbeing" onchange="updateServices()">
+                                <span class="service-label">
+                                    <i class="fas fa-heart service-icon"></i>
+                                    Emotional Wellbeing
+                                </span>
+                                <span class="service-description">Building resilience & emotional intelligence for daily life</span>
+                            </label>
+                            <label class="service-checkbox">
+                                <input type="checkbox" name="service" value="counseling" onchange="updateServices()">
+                                <span class="service-label">
+                                    <i class="fas fa-comments service-icon"></i>
+                                    Peer Support & Counseling
+                                </span>
+                                <span class="service-description">Someone to listen & provide professional guidance</span>
+                            </label>
+                            <label class="service-checkbox">
+                                <input type="checkbox" name="service" value="self-harm-support" onchange="updateServices()">
+                                <span class="service-label">
+                                    <i class="fas fa-hands-helping service-icon"></i>
+                                    Self-Harm & Suicidal Support
+                                </span>
+                                <span class="service-description">Crisis intervention & immediate emergency help</span>
+                            </label>
+                            <label class="service-checkbox">
+                                <input type="checkbox" name="service" value="LGBTQ-support" onchange="updateServices()">
+                                <span class="service-label">
+                                    <i class="fas fa-rainbow service-icon"></i>
+                                    LGBTQ+ Support & Acceptance
+                                </span>
+                                <span class="service-description">Safe inclusive space for LGBTQ+ youth community</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Sexual & Reproductive Health Services -->
+                    <div class="service-category">
+                        <div class="service-category-title">
+                            <i class="fas fa-heart category-icon"></i>
+                            Sexual & Reproductive Health
+                            <span class="service-count">6</span>
+                        </div>
+                        <div class="service-options">
+                            <label class="service-checkbox">
+                                <input type="checkbox" name="service" value="reproductive-health" onchange="updateServices()">
+                                <span class="service-label">
+                                    <i class="fas fa-stethoscope service-icon"></i>
+                                    Body & Sexual Health Basics
+                                </span>
+                                <span class="service-description">Understanding your body, periods & sexual wellness</span>
+                            </label>
+                            <label class="service-checkbox">
+                                <input type="checkbox" name="service" value="sex-education" onchange="updateServices()">
+                                <span class="service-label">
+                                    <i class="fas fa-book service-icon"></i>
+                                    Comprehensive Sex Education
+                                </span>
+                                <span class="service-description">Consent, intimacy & making healthy choices</span>
+                            </label>
+                            <label class="service-checkbox">
+                                <input type="checkbox" name="service" value="contraception" onchange="updateServices()">
+                                <span class="service-label">
+                                    <i class="fas fa-shield-alt service-icon"></i>
+                                    Contraception & Family Planning
+                                </span>
+                                <span class="service-description">Birth control options & pregnancy prevention methods</span>
+                            </label>
+                            <label class="service-checkbox">
+                                <input type="checkbox" name="service" value="sti-prevention" onchange="updateServices()">
+                                <span class="service-label">
+                                    <i class="fas fa-virus service-icon"></i>
+                                    STI Prevention & Testing
+                                </span>
+                                <span class="service-description">Information on testing, prevention & treatment</span>
+                            </label>
+                            <label class="service-checkbox">
+                                <input type="checkbox" name="service" value="pregnancy-support" onchange="updateServices()">
+                                <span class="service-label">
+                                    <i class="fas fa-baby service-icon"></i>
+                                    Pregnancy Support & Options
+                                </span>
+                                <span class="service-description">Information & support for young parents everywhere</span>
+                            </label>
+                            <label class="service-checkbox">
+                                <input type="checkbox" name="service" value="menstrual-health" onchange="updateServices()">
+                                <span class="service-label">
+                                    <i class="fas fa-leaf service-icon"></i>
+                                    Menstrual Health & Hygiene
+                                </span>
+                                <span class="service-description">Period health, PMS & menstrual disorders</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Relationships & Social Services -->
+                    <div class="service-category">
+                        <div class="service-category-title">
+                            <i class="fas fa-people-arrows category-icon"></i>
+                            Relationships & Social
+                            <span class="service-count">5</span>
+                        </div>
+                        <div class="service-options">
+                            <label class="service-checkbox">
+                                <input type="checkbox" name="service" value="relationships" onchange="updateServices()">
+                                <span class="service-label">
+                                    <i class="fas fa-heart-handshake service-icon"></i>
+                                    Relationships & Dating Advice
+                                </span>
+                                <span class="service-description">Friendships, dating & healthy communication skills</span>
+                            </label>
+                            <label class="service-checkbox">
+                                <input type="checkbox" name="service" value="sexual-harassment" onchange="updateServices()">
+                                <span class="service-label">
+                                    <i class="fas fa-warning service-icon"></i>
+                                    Sexual Harassment & Abuse Support
+                                </span>
+                                <span class="service-description">Support for victims & resources for healing</span>
+                            </label>
+                            <label class="service-checkbox">
+                                <input type="checkbox" name="service" value="consent-education" onchange="updateServices()">
+                                <span class="service-label">
+                                    <i class="fas fa-handshake service-icon"></i>
+                                    Consent & Boundaries Education
+                                </span>
+                                <span class="service-description">Understanding & setting healthy boundaries</span>
+                            </label>
+                            <label class="service-checkbox">
+                                <input type="checkbox" name="service" value="bullying-support" onchange="updateServices()">
+                                <span class="service-label">
+                                    <i class="fas fa-shield service-icon"></i>
+                                    Bullying & Cyberbullying Support
+                                </span>
+                                <span class="service-description">Help for victims & resources to stop bullying</span>
+                            </label>
+                            <label class="service-checkbox">
+                                <input type="checkbox" name="service" value="social-skills" onchange="updateServices()">
+                                <span class="service-label">
+                                    <i class="fas fa-users service-icon"></i>
+                                    Social Skills & Friendship Tips
+                                </span>
+                                <span class="service-description">Building healthy friendships & relationships</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Health Services & Resources -->
+                    <div class="service-category">
+                        <div class="service-category-title">
+                            <i class="fas fa-hospital category-icon"></i>
+                            Health Services & Resources
+                            <span class="service-count">5</span>
+                        </div>
+                        <div class="service-options">
+                            <label class="service-checkbox">
+                                <input type="checkbox" name="service" value="clinic-locator" onchange="updateServices()">
+                                <span class="service-label">
+                                    <i class="fas fa-map-location-dot service-icon"></i>
+                                    Find Local Health Clinics
+                                </span>
+                                <span class="service-description">Youth-friendly clinics & health centers near you</span>
+                            </label>
+                            <label class="service-checkbox">
+                                <input type="checkbox" name="service" value="vaccination-info" onchange="updateServices()">
+                                <span class="service-label">
+                                    <i class="fas fa-syringe service-icon"></i>
+                                    Vaccination Information
+                                </span>
+                                <span class="service-description">HPV, meningitis & other youth vaccines info</span>
+                            </label>
+                            <label class="service-checkbox">
+                                <input type="checkbox" name="service" value="nutrition-fitness" onchange="updateServices()">
+                                <span class="service-label">
+                                    <i class="fas fa-apple-alt service-icon"></i>
+                                    Nutrition & Fitness Guidance
+                                </span>
+                                <span class="service-description">Healthy eating & exercise tips for youth</span>
+                            </label>
+                            <label class="service-checkbox">
+                                <input type="checkbox" name="service" value="substance-abuse" onchange="updateServices()">
+                                <span class="service-label">
+                                    <i class="fas fa-ban service-icon"></i>
+                                    Substance Abuse Prevention & Support
+                                </span>
+                                <span class="service-description">Information & help with drugs, alcohol & smoking</span>
+                            </label>
+                            <label class="service-checkbox">
+                                <input type="checkbox" name="service" value="sleep-hygiene" onchange="updateServices()">
+                                <span class="service-label">
+                                    <i class="fas fa-moon service-icon"></i>
+                                    Sleep & Rest Wellness
+                                </span>
+                                <span class="service-description">Sleep hygiene & rest management for youth</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Life Skills & Education -->
+                    <div class="service-category">
+                        <div class="service-category-title">
+                            <i class="fas fa-graduation-cap category-icon"></i>
+                            Life Skills & Education
+                            <span class="service-count">5</span>
+                        </div>
+                        <div class="service-options">
+                            <label class="service-checkbox">
+                                <input type="checkbox" name="service" value="financial-literacy" onchange="updateServices()">
+                                <span class="service-label">
+                                    <i class="fas fa-wallet service-icon"></i>
+                                    Financial Literacy & Money Management
+                                </span>
+                                <span class="service-description">Budgeting, saving & smart spending habits</span>
+                            </label>
+                            <label class="service-checkbox">
+                                <input type="checkbox" name="service" value="career-guidance" onchange="updateServices()">
+                                <span class="service-label">
+                                    <i class="fas fa-briefcase service-icon"></i>
+                                    Career & Education Guidance
+                                </span>
+                                <span class="service-description">Career exploration & education path planning</span>
+                            </label>
+                            <label class="service-checkbox">
+                                <input type="checkbox" name="service" value="stress-management" onchange="updateServices()">
+                                <span class="service-label">
+                                    <i class="fas fa-om service-icon"></i>
+                                    Stress Management Techniques
+                                </span>
+                                <span class="service-description">Mindfulness, meditation & relaxation tools</span>
+                            </label>
+                            <label class="service-checkbox">
+                                <input type="checkbox" name="service" value="decision-making" onchange="updateServices()">
+                                <span class="service-label">
+                                    <i class="fas fa-lightbulb service-icon"></i>
+                                    Decision-Making Skills
+                                </span>
+                                <span class="service-description">Critical thinking & life choices guidance</span>
+                            </label>
+                            <label class="service-checkbox">
+                                <input type="checkbox" name="service" value="parental-guidance" onchange="updateServices()">
+                                <span class="service-label">
+                                    <i class="fas fa-child service-icon"></i>
+                                    Parenting Support (for young parents)
+                                </span>
+                                <span class="service-description">Guidance for young mothers & fathers</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <input type="hidden" id="selectedServices" value="">
+                    <input type="hidden" id="serviceCount" value="0">
+                </div>
+
+                <!-- Government Support Alert -->
+                <div class="government-support-card">
+                    <div class="government-content">
+                        <div class="government-header">
+                            <div class="government-icon">⚖️</div>
+                            <div>
+                                <div class="government-title">Government Support Available</div>
+                                <div class="government-subtitle">For Serious Cases & Legal Matters</div>
+                            </div>
+                        </div>
+                        
+                        <div class="government-description">
+                            We are always ready to connect local government leaders to victims when cases are difficult to solve internally. If you are facing <strong>sexual violation, harassment, abuse, or any serious incident</strong>, we can help connect you with the right authorities and legal support.
+                        </div>
+
+                        <div class="government-features">
+                            <div class="feature-item">
+                                <div class="feature-icon">🤝</div>
+                                <div class="feature-text">Direct Connection</div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon">⚖️</div>
+                                <div class="feature-text">Legal Support</div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon">🛡️</div>
+                                <div class="feature-text">Full Protection</div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon">📢</div>
+                                <div class="feature-text">Your Voice Heard</div>
+                            </div>
+                        </div>
+
+                        <div class="government-contact">
+                            <div class="contact-label">📞 URGENT GOVERNMENT SUPPORT - CALL ONLY</div>
+                            <div class="contact-number">
+                                <i class="fas fa-phone-alt"></i>
+                                +250 727 118 423
+                            </div>
+                            <a href="tel:+250727118423" class="call-btn">
+                                <i class="fas fa-phone"></i>
+                                Call Now for Serious Cases
+                            </a>
+                        </div>
+
+                        <div class="contact-instruction">
+                            <strong>📝 Important Instructions:</strong>
+                            <ul style="margin-top: 0.5rem; padding-left: 1.5rem;">
+                                <li>• <strong>Phone calls only</strong> - This is a dedicated line for serious incidents</li>
+                                <li>• Be prepared to describe what happened briefly</li>
+                                <li>• Have your location ready</li>
+                                <li>• Mention that you're contacting through SafeSpace Youth</li>
+                                <li>• Your information will be handled with complete confidentiality</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="modal-actions flex gap-4 pt-6 border-t">
+                    <button class="btn-secondary flex-1" onclick="closeUserProfileModal()">Not Now</button>
+                    <button class="btn-primary flex-1" onclick="completeUserProfile()">Let's Begin 🚀</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Animated Navigation -->
+    <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-md shadow-lg border-b-4 border-gradient-to-r from-pink-500 to-red-500">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="nav-animated-title">
+                <div class="animated-title">
+                    <span>S</span><span>a</span><span>f</span><span>e</span><span>S</span><span>p</span><span>a</span><span>c</span><span>e</span><span> </span><span>Y</span><span>o</span><span>u</span><span>t</span><span>h</span>
+                </div>
+                <div style="font-size: 1.8rem; animation: float-up-down 3s ease-in-out infinite;">🌍</div>
+            </div>
+            <div class="hidden md:flex space-x-8 font-semibold">
+                <a href="#home" class="hover:text-pink-600 transition transform hover:scale-110 duration-300">Home</a>
+                <a href="#learn" class="hover:text-red-600 transition transform hover:scale-110 duration-300">Learn</a>
+                <a href="#features" class="hover:text-pink-600 transition transform hover:scale-110 duration-300">Features</a>
+                <a href="#values" class="hover:text-red-600 transition transform hover:scale-110 duration-300">Values</a>
+                <a href="#contact" class="hover:text-pink-600 transition transform hover:scale-110 duration-300">Contact</a>
+            </div>
+            <a href="#enter" onclick="openUserProfileModal()" class="bg-gradient-to-r from-pink-600 to-red-600 text-white px-6 py-2 rounded-full font-bold hover:scale-110 transition-transform duration-300 shadow-lg hover:shadow-2xl">Enter Safe Space</a>
+        </div>
+    </nav>
+
+    <!-- HERO HEADER -->
+    <header class="relative h-screen flex items-center justify-center text-center text-white overflow-hidden pt-20">
+        <div class="absolute inset-0 bg-black/40 z-10"></div>
+        <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1576091160550-112173f7f869?auto=format&fit=crop&q=80')] bg-cover bg-center"></div>
+        
+        <!-- Animated floating elements -->
+        <div class="absolute top-20 left-10 w-20 h-20 bg-pink-500 rounded-full opacity-20 animate-float"></div>
+        <div class="absolute bottom-20 right-10 w-32 h-32 bg-red-500 rounded-full opacity-20 animate-float" style="animation-delay: 1s;"></div>
+        
+        <div class="relative z-20 px-4">
+            <div class="glow-effect"></div>
+            <h1 class="animated-title mb-6 animate-slide-down" style="font-size: 4rem;">
+                <span>S</span><span>a</span><span>f</span><span>e</span><span>S</span><span>p</span><span>a</span><span>c</span><span>e</span><span> </span><span>Y</span><span>o</span><span>u</span><span>t</span><span>h</span>
+            </h1>
+            <p class="text-xl md:text-2xl mb-10 max-w-2xl mx-auto animate-slide-up stagger-1">Explore health topics at your own pace, without judgment or pressure</p>
+            <div class="flex flex-col md:flex-row gap-4 justify-center animate-slide-up stagger-2">
+                <a href="#learn" class="bg-white text-pink-600 px-8 py-3 rounded-lg font-bold text-lg transform hover:scale-110 transition-all duration-300 shadow-lg hover:shadow-2xl hover:bg-pink-50">Start Learning</a>
+                <a href="#enter" onclick="openUserProfileModal()" class="bg-gradient-to-r from-pink-600 to-red-600 text-white px-8 py-3 rounded-lg font-bold text-lg transform hover:scale-110 transition-all duration-300 shadow-lg hover:shadow-2xl">Enter As Guest</a>
+            </div>
+        </div>
+
+        <!-- Location Banner -->
+        <div class="location-banner absolute bottom-10 left-0 right-0">
+            <p class="banner-title">🌍 We're Serving Young People In:</p>
+            <div class="locations-container">
+                <div class="location-badge">
+                    <i class="fas fa-map-pin"></i>
+                    <span>Kigali, Rwanda</span>
+                </div>
+                <div class="location-badge">
+                    <i class="fas fa-map-pin"></i>
+                    <span>Musanze, Rwanda</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- MISSION & VISION SECTION -->
+    <section id="learn" class="py-24 max-w-7xl mx-auto px-6">
+        <div class="grid md:grid-cols-2 gap-16 items-center">
+            <div class="animate-slide-left">
+                <span class="text-pink-600 font-bold tracking-widest uppercase animate-pulse">Our Promise</span>
+                <h2 class="text-4xl font-bold mt-2 mb-6 text-gray-900">SafeSpace Youth</h2>
+                <p class="text-gray-600 leading-relaxed text-lg">
+                    We're here to support you with honest, kind information about health and wellbeing—without judgment, without fear. A world where every young person feels confident, supported, and empowered to make choices that are right for them.
+                </p>
+            </div>
+            <div class="bg-gradient-to-br from-pink-600 to-red-600 rounded-3xl p-10 text-white shadow-2xl transform hover:scale-105 transition-all duration-500 animate-slide-right animate-bounce-in">
+                <h3 class="text-2xl font-bold mb-4">🎯 Our Mission</h3>
+                <p class="opacity-90">Empower young people with accessible, accurate, and stigma-free health information through a safe and inclusive digital platform.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FEATURES SECTION -->
+    <section id="features" class="py-24 bg-gradient-to-r from-gray-100 to-pink-50 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16 animate-slide-down">
+                <h2 class="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-600 to-red-600 mb-4">How We Support You</h2>
+                <p class="text-gray-600 text-lg">Comprehensive mental health & reproductive health support</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Feature Card 1 -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg border-t-4 border-pink-600 hover:shadow-2xl transition-all duration-300 transform hover:scale-105 animate-slide-up stagger-1 group">
+                    <div class="bg-gradient-to-br from-pink-500 to-pink-600 w-16 h-16 rounded-full flex items-center justify-center mb-6 group-hover:animate-rotate-float">
+                        <i class="fas fa-lock text-white text-2xl"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3 text-gray-800">Your Privacy Matters</h4>
+                    <p class="text-gray-500">Explore with a unique name. Your real identity stays safe with us, always.</p>
+                </div>
+
+                <!-- Feature Card 2 -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg border-t-4 border-red-600 hover:shadow-2xl transition-all duration-300 transform hover:scale-105 animate-slide-up stagger-2 group">
+                    <div class="bg-gradient-to-br from-red-500 to-red-600 w-16 h-16 rounded-full flex items-center justify-center mb-6 group-hover:animate-rotate-float">
+                        <i class="fas fa-book text-white text-2xl"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3 text-gray-800">Learn & Explore</h4>
+                    <p class="text-gray-500">Easy-to-understand information on topics that matter to you</p>
+                </div>
+
+                <!-- Feature Card 3 -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg border-t-4 border-pink-600 hover:shadow-2xl transition-all duration-300 transform hover:scale-105 animate-slide-up stagger-3 group">
+                    <div class="bg-gradient-to-br from-pink-500 to-pink-600 w-16 h-16 rounded-full flex items-center justify-center mb-6 group-hover:animate-rotate-float">
+                        <i class="fas fa-comments text-white text-2xl"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3 text-gray-800">Someone to Talk To</h4>
+                    <p class="text-gray-500">Chat with us anytime. We listen without judgment.</p>
+                </div>
+
+                <!-- Feature Card 4 -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg border-t-4 border-red-600 hover:shadow-2xl transition-all duration-300 transform hover:scale-105 animate-slide-up stagger-1 group">
+                    <div class="bg-gradient-to-br from-red-500 to-red-600 w-16 h-16 rounded-full flex items-center justify-center mb-6 group-hover:animate-rotate-float">
+                        <i class="fas fa-map-marker text-white text-2xl"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3 text-gray-800">Get Real Help</h4>
+                    <p class="text-gray-500">Connect to trusted clinics and counselors in your area</p>
+                </div>
+
+                <!-- Feature Card 5 -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg border-t-4 border-pink-600 hover:shadow-2xl transition-all duration-300 transform hover:scale-105 animate-slide-up stagger-2 group">
+                    <div class="bg-gradient-to-br from-pink-500 to-pink-600 w-16 h-16 rounded-full flex items-center justify-center mb-6 group-hover:animate-rotate-float">
+                        <i class="fas fa-brain text-white text-2xl"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3 text-gray-800">Check In With Yourself</h4>
+                    <p class="text-gray-500">Track your mood and discover what helps you feel better</p>
+                </div>
+
+                <!-- Feature Card 6 -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg border-t-4 border-red-600 hover:shadow-2xl transition-all duration-300 transform hover:scale-105 animate-slide-up stagger-3 group">
+                    <div class="bg-gradient-to-br from-red-500 to-red-600 w-16 h-16 rounded-full flex items-center justify-center mb-6 group-hover:animate-rotate-float">
+                        <i class="fas fa-handshake text-white text-2xl"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3 text-gray-800">Find Your People</h4>
+                    <p class="text-gray-500">Connect with others who get it. You're not alone.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- VALUES SECTION -->
+    <section id="values" class="py-24 max-w-7xl mx-auto px-6">
+        <div class="grid md:grid-cols-2 gap-20">
+            <!-- Vision & Goals -->
+            <div class="animate-slide-left">
+                <h3 class="text-3xl font-bold mb-8 text-transparent bg-clip-text bg-gradient-to-r from-pink-600 to-red-600">What We Believe In</h3>
+                <div class="space-y-6">
+                    <div class="flex gap-4 transform hover:translate-x-2 transition-transform duration-300 animate-slide-up stagger-1">
+                        <div class="bg-gradient-to-br from-pink-100 to-pink-200 p-3 rounded-lg h-fit"><i class="fas fa-heart text-pink-600 text-xl"></i></div>
+                        <div>
+                            <h5 class="font-bold text-xl text-gray-900">Honest Support</h5>
+                            <p class="text-gray-600">Young people deserve honest, caring support without judgment.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4 transform hover:translate-x-2 transition-transform duration-300 animate-slide-up stagger-2">
+                        <div class="bg-gradient-to-br from-red-100 to-red-200 p-3 rounded-lg h-fit"><i class="fas fa-shield-alt text-red-600 text-xl"></i></div>
+                        <div>
+                            <h5 class="font-bold text-xl text-gray-900">Safety First</h5>
+                            <p class="text-gray-600">Privacy and safety come first, always. Your identity is protected.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4 transform hover:translate-x-2 transition-transform duration-300 animate-slide-up stagger-3">
+                        <div class="bg-gradient-to-br from-pink-100 to-pink-200 p-3 rounded-lg h-fit"><i class="fas fa-globe text-pink-600 text-xl"></i></div>
+                        <div>
+                            <h5 class="font-bold text-xl text-gray-900">Access for All</h5>
+                            <p class="text-gray-600">Everyone deserves access to good health information.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Key Features -->
+            <div class="animate-slide-right">
+                <h3 class="text-3xl font-bold mb-8 text-transparent bg-clip-text bg-gradient-to-r from-red-600 to-pink-600">Our Core Features</h3>
+                <ul class="space-y-4 text-lg">
+                    <li class="flex items-center transform hover:translate-x-2 transition-transform duration-300 animate-slide-up stagger-1">
+                        <i class="fas fa-check text-pink-600 mr-4 text-xl animate-heartbeat"></i>
+                        <span class="text-gray-700 font-semibold">Anonymous Access with Pseudonyms</span>
+                    </li>
+                    <li class="flex items-center transform hover:translate-x-2 transition-transform duration-300 animate-slide-up stagger-2">
+                        <i class="fas fa-check text-red-600 mr-4 text-xl animate-heartbeat" style="animation-delay: 0.3s;"></i>
+                        <span class="text-gray-700 font-semibold">Health & Support Hub</span>
+                    </li>
+                    <li class="flex items-center transform hover:translate-x-2 transition-transform duration-300 animate-slide-up stagger-3">
+                        <i class="fas fa-check text-pink-600 mr-4 text-xl animate-heartbeat" style="animation-delay: 0.6s;"></i>
+                        <span class="text-gray-700 font-semibold">AI Chatbot Support 24/7</span>
+                    </li>
+                    <li class="flex items-center transform hover:translate-x-2 transition-transform duration-300 animate-slide-up stagger-4">
+                        <i class="fas fa-check text-red-600 mr-4 text-xl animate-heartbeat" style="animation-delay: 0.9s;"></i>
+                        <span class="text-gray-700 font-semibold">Service Locator for Clinics</span>
+                    </li>
+                    <li class="flex items-center transform hover:translate-x-2 transition-transform duration-300 animate-slide-up stagger-5">
+                        <i class="fas fa-check text-pink-600 mr-4 text-xl animate-heartbeat" style="animation-delay: 1.2s;"></i>
+                        <span class="text-gray-700 font-semibold">Mood Tracking & Self-Care Tools</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- EMERGENCY SUPPORT SECTION -->
+    <section class="py-24 bg-gradient-to-r from-red-50 via-white to-pink-50 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16 animate-slide-down">
+                <span class="text-red-600 font-bold tracking-widest uppercase animate-pulse">Crisis Support</span>
+                <h2 class="text-4xl font-bold mt-2 mb-4 text-transparent bg-clip-text bg-gradient-to-r from-red-600 to-pink-600">We're Here for You</h2>
+                <p class="text-gray-600 text-lg">If you're going through something difficult, reach out to us directly</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Emergency Support Card -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105 animate-slide-up stagger-1 border-2 border-red-200 group">
+                    <div class="bg-gradient-to-br from-red-400 to-red-600 w-16 h-16 rounded-full flex items-center justify-center mb-6 group-hover:animate-rotate-float">
+                        <i class="fas fa-exclamation-circle text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3 text-gray-800">Immediate Support</h3>
+                    <p class="text-gray-600 mb-6">For urgent cases or direct support</p>
+                    <a href="mailto:innocentbyiringiro183@gmail.com?subject=URGENT:%20SafeSpace%20Youth%20Emergency%20Support%20Needed&body=I%20need%20immediate%20support%20and%20assistance.%20Please%20reach%20out%20to%20me%20as%20soon%20as%20possible.%20This%20is%20urgent." class="btn-danger w-full">
+                        <i class="fas fa-envelope mr-2"></i>Email Support
+                    </a>
+                    <p class="email-text text-center mt-3">innocentbyiringiro183@gmail.com</p>
+                </div>
+
+                <!-- WhatsApp Support Card -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105 animate-slide-up stagger-2 border-2 border-green-200 group">
+                    <div class="bg-gradient-to-br from-green-400 to-green-600 w-16 h-16 rounded-full flex items-center justify-center mb-6 group-hover:animate-rotate-float">
+                        <i class="fab fa-whatsapp text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3 text-gray-800">Chat With Us</h3>
+                    <p class="text-gray-600 mb-6">Talk to someone who cares</p>
+                    <a href="https://wa.me/250792369921?text=Hello%20SafeSpace%20Youth!%20I%20need%20support%20and%20guidance.%20Please%20help%20me." target="_blank" class="btn-whatsapp w-full">
+                        <i class="fab fa-whatsapp mr-2"></i>WhatsApp
+                    </a>
+                    <p class="email-text text-center mt-3">+250 792 369 921</p>
+                </div>
+
+                <!-- General Inquiry Card -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105 animate-slide-up stagger-3 border-2 border-pink-200 group">
+                    <div class="bg-gradient-to-br from-pink-400 to-pink-600 w-16 h-16 rounded-full flex items-center justify-center mb-6 group-hover:animate-rotate-float">
+                        <i class="fas fa-envelope text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3 text-gray-800">General Inquiry</h3>
+                    <p class="text-gray-600 mb-6">Questions about our services</p>
+                    <a href="mailto:safespaceyouth@gmail.com?subject=SafeSpace%20Youth%20Inquiry&body=Hello%20SafeSpace%20Youth%20Team,%20I%20have%20a%20question%20about%20your%20services." class="btn-info w-full">
+                        <i class="fas fa-envelope mr-2"></i>Email Us
+                    </a>
+                    <p class="email-text text-center mt-3">safespaceyouth@gmail.com</p>
+                </div>
+            </div>
+
+            <!-- Security Notice -->
+            <div class="mt-16 bg-gradient-to-r from-pink-50 to-red-50 border-l-4 border-pink-600 p-6 rounded-lg shadow-lg animate-slide-up">
+                <p class="text-gray-800 flex items-start">
+                    <i class="fas fa-shield-alt text-pink-600 mr-4 mt-1 flex-shrink-0 text-xl animate-bounce"></i>
+                    <span><strong class="text-pink-600">Your Safety Matters:</strong> All communications are secure and encrypted. We never share your personal information. Your privacy and safety are our top priorities.</span>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="py-24 bg-gradient-to-br from-pink-900 via-red-800 to-red-900 text-white px-6 relative overflow-hidden">
+        <!-- Animated background elements -->
+        <div class="absolute top-10 left-5 w-32 h-32 bg-pink-500 rounded-full opacity-10 animate-float"></div>
+        <div class="absolute bottom-10 right-5 w-40 h-40 bg-red-500 rounded-full opacity-10 animate-float" style="animation-delay: 1s;"></div>
+        
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 relative z-10">
+            <!-- Contact Info -->
+            <div class="animate-slide-left">
+                <h2 class="text-4xl font-bold mb-8 text-pink-300">Let's Connect</h2>
+                <div class="space-y-6 text-xl">
+                    <p class="flex items-center transform hover:translate-x-2 transition-transform duration-300">
+                        <i class="fas fa-phone text-pink-400 mr-4 text-2xl animate-rotate-float"></i> +250 792 369 921
+                    </p>
+                    <p class="flex items-center transform hover:translate-x-2 transition-transform duration-300">
+                        <i class="fas fa-envelope text-red-400 mr-4 text-2xl animate-bounce"></i> innocentbyiringiro183@gmail.com
+                    </p>
+                    <p class="flex items-center transform hover:translate-x-2 transition-transform duration-300">
+                        <i class="fas fa-map-marker-alt text-pink-400 mr-4 text-2xl animate-pulse"></i> Kigali & Musanze, Rwanda
+                    </p>
+                </div>
+                
+                <div class="mt-12 p-6 bg-white rounded-2xl w-fit inline-block text-center shadow-2xl transform hover:scale-110 transition-all duration-300 animate-bounce-in">
+                    <p class="text-pink-600 font-bold mb-2">Scan to Save Contact</p>
+                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=TEL:+250792369921" alt="QR Code" class="mx-auto">
+                </div>
+            </div>
+            
+            <!-- Quick Actions -->
+            <div class="space-y-6 animate-slide-right">
+                <div class="bg-white/10 backdrop-blur-md p-8 rounded-3xl border-2 border-white/20 shadow-2xl transform hover:scale-105 transition-all duration-300 group">
+                    <h3 class="text-2xl font-bold mb-6 text-pink-300">Quick Access</h3>
+                    
+                    <a href="https://wa.me/250792369921?text=Hello%20SafeSpace%20Youth!%20I%20need%20support%20and%20guidance.%20Please%20help%20me." target="_blank" class="w-full bg-gradient-to-r from-green-500 to-green-600 text-white font-black py-4 rounded-xl hover:from-green-600 hover:to-green-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-2xl tracking-widest mb-4 flex items-center justify-center">
+                        <i class="fab fa-whatsapp mr-2 text-2xl"></i>CHAT ON WHATSAPP
+                    </a>
+
+                    <a href="mailto:innocentbyiringiro183@gmail.com?subject=URGENT:%20SafeSpace%20Youth%20Emergency%20Support%20Needed&body=I%20need%20immediate%20support%20and%20assistance.%20Please%20reach%20out%20to%20me%20as%20soon%20as%20possible.%20This%20is%20urgent." class="w-full bg-gradient-to-r from-red-500 to-red-600 text-white font-black py-4 rounded-xl hover:from-red-600 hover:to-red-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-2xl tracking-widest mb-4 flex items-center justify-center">
+                        <i class="fas fa-envelope mr-2 text-2xl"></i>EMERGENCY SUPPORT
+                    </a>
+
+                    <a href="#enter" onclick="openUserProfileModal()" class="w-full bg-gradient-to-r from-pink-500 to-red-600 text-white font-black py-4 rounded-xl hover:from-pink-600 hover:to-red-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-2xl tracking-widest flex items-center justify-center">
+                        <i class="fas fa-sign-in-alt mr-2 text-2xl"></i>ENTER SAFESPACE
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="py-10 text-center text-gray-600 bg-white border-t-4 border-gradient-to-r from-pink-500 to-red-500">
+        <p class="text-lg font-semibold">&copy; 2026 SafeSpace Youth. All Rights Reserved.</p>
+        <p class="text-sm mt-2">Created with <i class="fas fa-heart text-red-600 animate-heartbeat" style="display: inline-block;"></i> for young people everywhere</p>
+    </footer>
+
+    <script>
+        // Modal Functions
+        function openUserProfileModal() {
+            document.getElementById('userProfileModal').classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeUserProfileModal() {
+            document.getElementById('userProfileModal').classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Age Group Selection
+        function selectAgeGroup(ageGroup) {
+            const buttons = document.querySelectorAll('.age-btn');
+            buttons.forEach(btn => btn.classList.remove('selected'));
+            event.target.closest('.age-btn').classList.add('selected');
+            document.getElementById('selectedAgeGroup').value = ageGroup;
+        }
+
+        // Service Selection
+        function updateServices() {
+            const checkboxes = document.querySelectorAll('input[name="service"]:checked');
+            const services = Array.from(checkboxes).map(cb => cb.value);
+            document.getElementById('selectedServices').value = JSON.stringify(services);
+            document.getElementById('serviceCount').value = services.length;
+        }
+
+        // Complete User Profile
+        function completeUserProfile() {
+            const ageGroup = document.getElementById('selectedAgeGroup').value;
+            const services = document.getElementById('selectedServices').value;
+
+            if (!ageGroup) {
+                alert('🎂 Please select your age group to continue');
+                return;
+            }
+
+            const userProfile = {
+                pseudonym: generatePseudonym(),
+                ageGroup: ageGroup,
+                services: services ? JSON.parse(services) : [],
+                createdAt: new Date().toISOString()
+            };
+
+            sessionStorage.setItem('userProfile', JSON.stringify(userProfile));
+            showWelcomeMessage(userProfile.pseudonym, userProfile.services.length);
+            closeUserProfileModal();
+        }
+
+        // Generate Pseudonym
+        function generatePseudonym() {
+            const adjectives = ['Bright', 'Happy', 'Brave', 'Kind', 'Curious', 'Strong', 'Wise', 'Calm', 'Joyful', 'Hopeful', 'Radiant', 'Serene', 'Vibrant', 'Confident', 'Amazing', 'Wonderful', 'Fantastic', 'Awesome'];
+            const nouns = ['Butterfly', 'Star', 'Eagle', 'River', 'Mountain', 'Sunrise', 'Peace', 'Hope', 'Phoenix', 'Radiance', 'Guardian', 'Dreamer', 'Protector', 'Beacon', 'Spark', 'Wave', 'Light', 'Spirit'];
+            
+            const randomAdj = adjectives[Math.floor(Math.random() * adjectives.length)];
+            const randomNoun = nouns[Math.floor(Math.random() * nouns.length)];
+            return `${randomAdj}${randomNoun}${Math.floor(Math.random() * 1000)}`;
+        }
+
+        // Show Welcome Message
+        function showWelcomeMessage(pseudonym, serviceCount) {
+            const welcome = document.createElement('div');
+            welcome.className = 'fixed inset-0 flex items-center justify-center z-[9999] bg-black/50 backdrop-blur-sm';
+            welcome.innerHTML = `
+                <div class="bg-gradient-to-br from-pink-600 to-red-600 text-white p-12 rounded-3xl shadow-2xl text-center max-w-md animate-bounce-in">
+                    <div class="text-6xl mb-4">🎉</div>
+                    <h2 class="text-3xl font-bold mb-2">Welcome, ${pseudonym}!</h2>
+                    <p class="text-lg mb-2">Your privacy is protected. 🔒</p>
+                    <p class="text-pink-100 mb-4">You selected ${serviceCount} service${serviceCount !== 1 ? 's' : ''}</p>
+                    <p class="text-pink-100">You're now entering a safe space...</p>
+                </div>
+            `;
+            document.body.appendChild(welcome);
+            
+            setTimeout(() => {
+                welcome.remove();
+            }, 4000);
+        }
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                if (this.getAttribute('href') !== '#enter') {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({ behavior: 'smooth' });
+                    }
+                }
+            });
+        });
+
+        // Close modal when clicking outside
+        document.getElementById('userProfileModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeUserProfileModal();
+            }
+        });
+
+        // Intersection Observer
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animation = getComputedStyle(entry.target).animation;
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('[class*="animate-"]').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+
+</body>
+</html>
